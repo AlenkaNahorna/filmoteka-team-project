@@ -2,8 +2,8 @@ import { Notify } from 'notiflix';
 
 Notify.init({
   width: '480px',
-  position: 'center-center',
-  distance: '0px',
+  position: 'center-top',
+  distance: '145px',
   timeout: 1000,
   opacity: 1,
   fontSize: '20px',
