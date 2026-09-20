@@ -4,6 +4,7 @@ import { refs } from './refs/refs';
 import { getFromStorage } from '../js/localStorage/storage';
 import { renderTopRated } from './render/renderTopRated';
 import { renderUpComing } from './render/renderUpComing';
+import { renderCartoons } from './render/renderCartoons';
 
 const {
   pagination: { paginationList, input, libraryGallery },
@@ -25,6 +26,10 @@ function renderCollection(currentPage) {
     }
     if (refs.filter.upcomingBtn.classList.contains('btn-tab-active')) {
       renderUpComing(currentPage);
+      return;
+    }
+    if (refs.filter.cartoonsBtn.classList.contains('btn-tab-active')) {
+      renderCartoons(currentPage);
       return;
     }
   }
@@ -93,6 +98,9 @@ function onPaginationBtnClick(event) {
     }
     if (refs.filter.topRatedBtn.classList.contains('btn-tab-active')) {
       currentPage = Number(getFromStorage('active-top'));
+    }
+    if (refs.filter.cartoonsBtn.classList.contains('btn-tab-active')) {
+      currentPage = Number(getFromStorage('active-cartoons'));
     }
   }
   if (event.target.nodeName !== 'SPAN') {

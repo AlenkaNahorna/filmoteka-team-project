@@ -44,6 +44,7 @@ export const refs = {
     popularBtn: document.querySelector('.popular-btn'),
     topRatedBtn: document.querySelector('.top-rated-btn'),
     upcomingBtn: document.querySelector('.upcoming-btn'),
+    cartoonsBtn: document.querySelector('.cartoons-btn'),
     searchBtnContainer: document.querySelector('.search-btn'),
   },
 };
