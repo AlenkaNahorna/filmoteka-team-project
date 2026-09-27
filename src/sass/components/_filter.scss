@@ -23,7 +23,8 @@
 .popular-btn,
 .top-rated-btn,
 .upcoming-btn,
-.trending-tv-btn {
+.trending-tv-btn,
+.genre-filter {
   color: black;
   text-align: center;
   font-size: 20px;
@@ -60,4 +61,22 @@ box-shadow: 0 2px 8px rgba(255, 107, 1, 0.5), inset 0 1px rgba(255, 255, 255, 0.
     color: $secondary-color;
     transform: scale(1.05);
     box-shadow: none;
+  }
+
+.genre-filter {
+    width: auto;
+    min-width: 0;
+    height: 47px;
+    padding: 10px 24px 10px 10px;
+    box-sizing: border-box;
+    appearance: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:focus {
+      outline: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 42px;
+    }
   }
