@@ -4,6 +4,7 @@ import { refs } from './refs/refs';
 import { getFromStorage } from '../js/localStorage/storage';
 import { renderTopRated } from './render/renderTopRated';
 import { renderUpComing } from './render/renderUpComing';
+import { renderGenre } from './render/renderGenre';
 
 const {
   pagination: { paginationList, input, libraryGallery },
@@ -15,6 +16,10 @@ function renderCollection(currentPage) {
     requestForMovie(currentPage);
     return;
   } else {
+    if (refs.filter.genreSelect.value) {
+      renderGenre(refs.filter.genreSelect.value, currentPage);
+      return;
+    }
     if (refs.filter.popularBtn.classList.contains('btn-tab-active')) {
       requestForPage(currentPage);
       return;
@@ -93,6 +98,9 @@ function onPaginationBtnClick(event) {
     }
     if (refs.filter.topRatedBtn.classList.contains('btn-tab-active')) {
       currentPage = Number(getFromStorage('active-top'));
+    }
+    if (refs.filter.genreSelect.value) {
+      currentPage = Number(getFromStorage('active-genre'));
     }
   }
   if (event.target.nodeName !== 'SPAN') {
