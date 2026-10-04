@@ -45,6 +45,9 @@ export const refs = {
     topRatedBtn: document.querySelector('.top-rated-btn'),
     upcomingBtn: document.querySelector('.upcoming-btn'),
     genreSelect: document.querySelector('.genre-filter'),
+    yearFrom: document.querySelector('#year-from'),
+    yearTo: document.querySelector('#year-to'),
+    yearApplyBtn: document.querySelector('.year-filter-button'),
     searchBtnContainer: document.querySelector('.search-btn'),
   },
 };

@@ -40,6 +40,8 @@ const onSearch = e => {
 
   refs.home.gallery.innerHTML = '';
   refs.filter.genreSelect.value = '';
+  refs.filter.yearFrom.value = '';
+  refs.filter.yearTo.value = '';
   filmsParams.query = e.currentTarget.elements[0].value;
   if (filmsParams.query.length <= 1) {
     refs.pagination.paginationList.innerHTML = '';

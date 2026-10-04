@@ -21,6 +21,14 @@
           <option value="">ALL GENRES</option>
         </select>
       </li>
+      <li class="search-btn-item year-range-filter-item">
+        <label class="visually-hidden" for="year-from">Release year from</label>
+        <input class="year-filter" id="year-from" type="number" min="1870" placeholder="FROM" />
+        <span class="year-filter-separator" aria-hidden="true">-</span>
+        <label class="visually-hidden" for="year-to">Release year to</label>
+        <input class="year-filter" id="year-to" type="number" min="1870" placeholder="TO" />
+        <button class="button year-filter-button" type="button">APPLY</button>
+      </li>
     </ul>
   </div>
 <div class="gallery" id="abc"></div>

@@ -80,3 +80,57 @@ box-shadow: 0 2px 8px rgba(255, 107, 1, 0.5), inset 0 1px rgba(255, 255, 255, 0.
       height: 42px;
     }
   }
+
+.year-range-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+.year-filter {
+    width: 74px;
+    height: 47px;
+    padding: 10px 6px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 107, 1, 0.6);
+    border-bottom: 3px solid rgba(255, 107, 1, 0.6);
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(255, 107, 1, 0.5), inset 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25),
+      inset 0 -15px 30px rgba(255, 107, 1, 0.3);
+    font-size: 16px;
+    text-align: center;
+
+    &::placeholder {
+      color: $primary-color;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: 2px solid $accent-color;
+      outline-offset: 2px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 65px;
+      height: 42px;
+      font-size: 14px;
+    }
+  }
+
+.year-filter-button {
+    padding: 10px;
+    font-size: 16px;
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+      font-size: 14px;
+    }
+  }
+
+.year-filter-separator {
+    color: $primary-color;
+    font-size: 18px;
+  }
